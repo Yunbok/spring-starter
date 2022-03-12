@@ -1,8 +1,15 @@
 package yunbok.mvcspring.domain;
 
+
+import javax.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    //@Column(name = "username")  //db 컬럼명이 다를때는 따로 지정가능
     private String name;
 
     public Long getId() {
